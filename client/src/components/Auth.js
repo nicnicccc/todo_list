@@ -48,7 +48,7 @@ const Auth = () => {
             <div className={"auth-container-box"}>
                 <form>
                     <h2>
-                        {isLogIn? 'Please Log In': 'Please Sign up!'}
+                        {isLogIn? 'Log In': 'Sign up'}
                     </h2>
                     <input type={'email'} placeholder={'email'} onChange={(e) => setEmail(e.target.value)}/>
                     <input type={'password'} placeholder={'password'} onChange={(e) => setPassword(e.target.value)}/>
@@ -60,17 +60,16 @@ const Auth = () => {
                 <div className={'auth-options'}>
                     <button
                         onClick={() => viewLogin(false)}
-                        style={{backgroundColor: !isLogIn? 'rgb(255, 255, 255)' : 'rgb(188, 188, 188)'}}>
+                        style={{backgroundColor: !isLogIn? "orange" :"white", color: !isLogIn? "white": "black"}}>
                         Sign Up
                     </button>
                     <button
                         onClick={() => viewLogin(true)}
-                        style={{backgroundColor: isLogIn? 'rgb(255, 255, 255)' : 'rgb(188, 188, 188)'}}>
+                        style={{backgroundColor: isLogIn? "orange" : "white", color: !isLogIn? "black": "white"}}>
                         Login
                     </button>
                 </div>
             </div>
-
         </div>
     );
 }
