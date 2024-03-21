@@ -6,15 +6,17 @@ import Auth from "./components/Auth";
 import {useCookies} from "react-cookie";
 
 const App = () => {
-    const [cookies, setCookie,, removeCookie] = useCookies(null)
+    const [cookies, setCookie, removeCookie] = useCookies(null)
     const userEmail = cookies.Email
     const [tasks, setTasks] = useState(null)
     const AuthToken = cookies.AuthToken
+
+    console.log('cookies si app: ', process.env.REACT_APP_SERVERURL)
     const getData = async () => {
 
         try {
             //TODO jangan lupa ganti url
-            const response = await fetch(`http://localhost:8000/todos/${userEmail}`)
+            const response = await fetch(`${process.env.REACT_APP_SERVERURL}/todos/${userEmail}`)
             const test = await response.json()
             setTasks(test)
         }

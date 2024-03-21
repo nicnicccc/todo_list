@@ -9,16 +9,15 @@ body {
     background: url("./Assets/img.png");
     background-size: cover;
     background-position: center;
-    backdrop-filter: blur(2px);
 
 }
 .app {
     background-color: white;
-    box-shadow: rgba(0,0,0, 0.05) 0 6px 24px, rgba(0,0,0, 0.08) 0 0 0 1px;
+    box-shadow: grey 0 0 100px;
     border-radius: 10px;
     padding: 10px;
     width: 800px;
-    margin-top: 100px;
+    margin: 100px;
 }
 
 .button-container, .info-container{
@@ -154,10 +153,11 @@ input {
     top: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0,0,0,0.05);
+    background-color: rgba(0,0,0,0.2);
     display: flex;
     justify-content: center;
     align-items: center;
+    backdrop-filter: blur(7px);
 }
 
 .modal {
@@ -258,3 +258,39 @@ input {
 .drag {
     color: orange;
 }
+
+
+/********** Range Input Styles **********/
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background-color: rgb(255, 213, 128);
+    border-radius: 0.5rem;
+    height: 0.5rem;
+}
+
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;  /*Override default look */
+    appearance: none;
+    margin-top: -12px; /* Centers thumb on the track */
+    background-color: orange;
+    height: 2rem;
+    width: 1rem;
+    border-radius: 10px;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+    border: 1px solid orange;}
