@@ -3,11 +3,11 @@ const Pool = require('pg').Pool
 require('dotenv').config()
 
 const pool = new Pool({
-    user: 'unfrovlb',
-    host: 'cornelius.db.elephantsql.com',
-    password: 'uybzHkKrG8vsfE_3GySSkupP1z-sDWzS',
-    port: 5432,
-    database: 'unfrovlb'
+    user: process.env.USERNAMEE,
+    host: process.env.HOST,
+    password: process.env.PASSWORD,
+    port: process.env.PORT,
+    database: process.env.DATABASE
     }
 )
 

@@ -9,7 +9,7 @@ const ListItem = ({task, getData}) => {
 
         try {
             //TODO Jangan lupa ganti serverurl
-            const response = await fetch(`${process.env.REACT_APP_SERVERURL}/todos/${task.id}`, {
+            const response = await fetch(`http://localhost:8000/todos/${task.id}`, {
                 method: 'DELETE'
             })
             if (response.status === 200) {

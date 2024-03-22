@@ -11,12 +11,11 @@ const App = () => {
     const [tasks, setTasks] = useState(null)
     const AuthToken = cookies.AuthToken
 
-    console.log('cookies si app: ', process.env.REACT_APP_SERVERURL)
     const getData = async () => {
 
         try {
             //TODO jangan lupa ganti url
-            const response = await fetch(`${process.env.REACT_APP_SERVERURL}/todos/${userEmail}`)
+            const response = await fetch(`http://localhost:8000/todos/${userEmail}`)
             const test = await response.json()
             setTasks(test)
         }
@@ -29,7 +28,7 @@ const App = () => {
             getData()
         }
     }, [])
-    console.log(tasks)
+    console.log('testtttttt', tasks)
 
     //sort by date
     const sortedList = tasks?.sort((a,b) => new Date(a.date) - new Date(b.date))
