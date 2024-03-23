@@ -20,7 +20,7 @@ const Modal = ({mode, setShowModal, getData, task}) => {
         e.preventDefault()
         try {
             //TODO
-            const response = await fetch(`https://server-todos-nico-gdkqsbwlv-nicniccccs-projects.vercel.app/todos`, {
+            const response = await fetch(`https://www.server-todos-nico-gdkqsbwlv-nicniccccs-projects.vercel.app/todos`, {
                 method: "POST",
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(data)
@@ -41,7 +41,7 @@ const Modal = ({mode, setShowModal, getData, task}) => {
         e.preventDefault()
         try {
             //TODO
-            const response = await fetch(`https://server-todos-nico-gdkqsbwlv-nicniccccs-projects.vercel.app/todos/${task.id}`, {
+            const response = await fetch(`https://www.server-todos-nico-gdkqsbwlv-nicniccccs-projects.vercel.app/todos/${task.id}`, {
                 method: 'PUT',
                 headers: {'Content-Type' : 'application/json'},
                 body: JSON.stringify(data)

@@ -9,7 +9,7 @@ const ListItem = ({task, getData}) => {
 
         try {
             //TODO Jangan lupa ganti serverurl
-            const response = await fetch(`https://server-todos-nico-gdkqsbwlv-nicniccccs-projects.vercel.app/todos/${task.id}`, {
+            const response = await fetch(`https://www.server-todos-nico-gdkqsbwlv-nicniccccs-projects.vercel.app/todos/${task.id}`, {
                 method: 'DELETE'
             })
             if (response.status === 200) {

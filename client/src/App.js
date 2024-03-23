@@ -15,7 +15,7 @@ const App = () => {
 
         try {
             //TODO jangan lupa ganti url
-            const response = await fetch(`https://server-todos-nico-gdkqsbwlv-nicniccccs-projects.vercel.app/todos/${userEmail}`)
+            const response = await fetch(`https://www.server-todos-nico-gdkqsbwlv-nicniccccs-projects.vercel.app/todos/${userEmail}`)
             const test = await response.json()
             setTasks(test)
         }
