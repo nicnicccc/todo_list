@@ -24,10 +24,10 @@ const Auth = () => {
             return
         }
         //TODO benerin addresssss
-        const response = await fetch (`http://localhost:8000/${endpoint}`, {
+        const response = await fetch (`https://server-todos-nico-gdkqsbwlv-nicniccccs-projects.vercel.app/${endpoint}`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({email, password})
+            body: JSON.stringify({email, password}),
         })
 
         const data = await response.json()

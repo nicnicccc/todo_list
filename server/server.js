@@ -13,6 +13,7 @@ app.use(express.json())
 app.get('/todos/:userEmail', async (req, res) => {
     console.log(req)
     const {userEmail} = req.params
+    console.log('todoss', req.body)
 
     try {
         const todos = await pool.query('SELECT * FROM todos WHERE user_email = $1', [userEmail])
@@ -30,6 +31,7 @@ app.get('/todos/:userEmail', async (req, res) => {
 // create a new todo
 app.post('/todos', async (req, res) => {
     const{user_email, title, progress, date} = req.body
+    console.log('todo', req.body)
     console.log(user_email, title, progress, date)
     const id = uuidv4()
     try {

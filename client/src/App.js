@@ -15,7 +15,7 @@ const App = () => {
 
         try {
             //TODO jangan lupa ganti url
-            const response = await fetch(`http://localhost:8000/todos/${userEmail}`)
+            const response = await fetch(`https://server-todos-nico-gdkqsbwlv-nicniccccs-projects.vercel.app/todos/${userEmail}`)
             const test = await response.json()
             setTasks(test)
         }
@@ -28,7 +28,6 @@ const App = () => {
             getData()
         }
     }, [])
-    console.log('testtttttt', tasks)
 
     //sort by date
     const sortedList = tasks?.sort((a,b) => new Date(a.date) - new Date(b.date))
